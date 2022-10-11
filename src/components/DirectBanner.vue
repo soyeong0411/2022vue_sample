@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <ul class="d_icon">
-        <li v-for="item in data" :key="item">
+    <ul class="dBanner">
+        <li v-for="(item,i) in data" v-bind:key="i">
             <a :href="item.href">
-                <img v-bind:src="`images/directs/${item.src}`" alt="">
+                <img :src="`./images/directs/${item.src}`" alt="">
                 <div class="txt">
-                    {{item.name}}
-                </div>
+                {{item.name}}
+            </div>
             </a>
         </li>
     </ul>
@@ -14,24 +14,21 @@
 </template>
 
 <script>
-    
 export default {
-    props:["data"],
-    data(){
-        return {
-            }
-    }
+    props:["data"]
 }
 </script>
 
 <style lang="scss">
-    .d_icon{
+    .dBanner{
         display: flex;
+        flex-wrap: wrap;
         gap:20px;
         li{
-
+            width: calc((100% - 20px * 9)/10);
         }
         img{
+            display: block;
             width: 100%;
         }
         .txt{

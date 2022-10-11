@@ -1,7 +1,13 @@
 <template>
   <HeaderView></HeaderView>
   <main-visual></main-visual>
-  <DirectBanner v-bind:data = "directData"></DirectBanner>
+  <DirectBanner :data = "directData"></DirectBanner>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 bg-primary">test</div>
+      <div class="col-md-6 bg-info" >test</div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -9,7 +15,7 @@
   import MainVisual from './components/MainVisual.vue'
   import DirectBanner from "./components/DirectBanner.vue"
 
-  import directs from "./data/directs.js"
+  import directs from "@/data/directs.js"
 
 
 export default {
