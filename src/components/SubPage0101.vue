@@ -1,6 +1,5 @@
 <template>
-  test
-  <router-view></router-view>
+  여기는 서브페이지0101입니다.
 </template>
 
 <script>
